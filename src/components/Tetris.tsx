@@ -12,12 +12,15 @@ const Tetris = () => {
     <StyledTetrisWrapper>
         <StyledTetris>
         <Stage stage={createStage()}/>
+        <aside>
         <div>
         <Display text="Score"/>
         <Display text="Rows"/>
         <Display text="Level"/>
-        </div>
         <StartButton />
+        </div>
+        </aside>
+        
         </StyledTetris>
     </StyledTetrisWrapper>
   )

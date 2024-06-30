@@ -1,7 +1,9 @@
 
+import { StyledDisplay, StyledStage } from "./styles/StyledDisplay"
+
 const Display = ({gameOver, text}) => {
   return (
-    <div>{text}</div>
+    <StyledDisplay gameOver={gameOver}>{text}</StyledDisplay>
   )
 }
 

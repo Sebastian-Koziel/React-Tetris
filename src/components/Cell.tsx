@@ -3,7 +3,7 @@ import { TESTROMINOS } from "../gameHelpers/tetrominos"
 
 const Cell = ({ type }) => {
   return (
-    <StyledCell type={'L'} color={TESTROMINOS['L'].color} />
+    <StyledCell type={type} color={TESTROMINOS[type].color} />
   )
 }
 
