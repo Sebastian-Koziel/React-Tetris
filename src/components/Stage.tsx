@@ -1,7 +1,14 @@
+
+import { Stage as StageType} from "../hooks/useStage";
 import Cell from "./Cell"
 import { StyledStage } from "./styles/StyledStage"
 
-const Stage = ( { stage }) => {
+interface StageProps {
+  stage: StageType;
+  
+}
+
+const Stage:React.FC<StageProps> = ( { stage }) => {
     
   return (
     <StyledStage width={stage[0].length} height={stage.length}>

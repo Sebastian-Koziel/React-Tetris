@@ -1,7 +1,12 @@
 
-import { StyledDisplay, StyledStage } from "./styles/StyledDisplay"
+import { StyledDisplay } from "./styles/StyledDisplay"
 
-const Display = ({gameOver, text}) => {
+interface DisplayProps {
+  gameOver: boolean
+  text: string
+}
+
+const Display:React.FC<DisplayProps> = ({gameOver, text}) => {
   return (
     <StyledDisplay gameOver={gameOver}>{text}</StyledDisplay>
   )

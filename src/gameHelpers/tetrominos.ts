@@ -1,4 +1,9 @@
-export const TESTROMINOS = {
+export interface Tetromino {
+    shape: (number | string)[][];
+    color: string;
+  }
+
+export const TESTROMINOS: { [key: string]: Tetromino } = {
     0: { shape: [[0]], color: '0,0,0' },
     I: {
         shape: [
@@ -65,8 +70,8 @@ export const TESTROMINOS = {
     },  
 }
 
-export const randomTetromino = () => {
-    const tetrominos = 'IJLOSTZ';
+export const randomTetromino = (): Tetromino => {
+    const tetrominos: any = 'IJLOSTZ';
     const randomTetromino = tetrominos[Math.floor(Math.random() * tetrominos.length)];
     return TESTROMINOS[randomTetromino];
 }

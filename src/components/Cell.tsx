@@ -1,7 +1,11 @@
 import { StyledCell } from "./styles/StyledCell"
 import { TESTROMINOS } from "../gameHelpers/tetrominos"
 
-const Cell = ({ type }) => {
+interface CellProps {
+  type: keyof typeof TESTROMINOS
+}
+
+const Cell:React.FC<CellProps> = ({ type }) => {
   return (
     <StyledCell type={type} color={TESTROMINOS[type].color} />
   )
